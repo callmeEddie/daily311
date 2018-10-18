@@ -18,7 +18,7 @@ library(plotly)
 
 
 # Read in yearly updated file & preprocess
-request_yearly = fread("http://192.241.132.72/data_yearly.csv") %>%
+request_yearly = fread("http://104.248.4.242/data_yearly.csv") %>%
 
   mutate(created_date = ymd_hms(created_date),
          closed_date = ymd_hms(closed_date),
@@ -26,7 +26,7 @@ request_yearly = fread("http://192.241.132.72/data_yearly.csv") %>%
 
 
 # Read in daily updated file & preprocess
-request_daily = fread("http://192.241.132.72/data_daily.csv") %>%
+request_daily = fread("http://104.248.4.242/data_daily.csv") %>%
 
   mutate(created_date = ymd_hms(created_date),
          closed_date = ymd_hms(closed_date),
