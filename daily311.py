@@ -7,7 +7,7 @@ import pandas
 API_ENDPOINT = 'fhrw-4uyv'
 API_URL = 'data.cityofnewyork.us'
 API_APP_KEY = 'vHIZ8v0kxS6gg5c1DgqLDS5N5'
-API_ROWS_LIMIT = 100000
+API_ROWS_LIMIT = 600000
 
 # Date configuration
 today = datetime.datetime.now()
@@ -44,5 +44,5 @@ def saveToCSV(data, fileName):
   df = pandas.DataFrame(dicts)
   df.to_csv(fileName)
 
-saveToCSV(dailyData, 'data/data_daily.csv')
-saveToCSV(yearlyData, 'data/data_yearly.csv')
+saveToCSV(dailyData, '/var/www/html/data_daily.csv')
+saveToCSV(yearlyData, '/var/www/html/data_yearly.csv')
